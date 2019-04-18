@@ -1,19 +1,29 @@
 package com.gradulation.vote.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.Map;
 
 @Controller
 public class RestaurantController {
 
     @GetMapping("/")
-    public String main(
-            @RequestParam(name = "name", required = false, defaultValue = "World") String name,
-            Model model
-    ){
-        model.addAttribute("name", name);
+    public String common(Map<String, Object> model) {
         return "main";
+    }
+
+    @GetMapping("/main")
+    public String main(){
+        return "main";
+    }
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
+    @GetMapping("registration")
+    public String registration(){
+        return "registration";
     }
 }
