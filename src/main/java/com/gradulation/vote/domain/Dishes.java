@@ -13,7 +13,7 @@ public class Dishes {
     private Integer price;
 
     @ManyToOne(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "")
+    @JoinColumn(name = "rest_id")
     private Restaurant restaurant;
 
     public Dishes() {

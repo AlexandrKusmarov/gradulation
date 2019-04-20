@@ -12,8 +12,8 @@ public class Restaurant {
 
     private String restname;
 
-    @OneToMany(fetch = FetchType.EAGER)
-//    @JoinColumn(name = "")
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "restaurant", cascade = CascadeType.ALL)
+
     private Set<Dishes> dishes;
 
     public Restaurant() {
