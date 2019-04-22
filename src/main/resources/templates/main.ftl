@@ -1,13 +1,19 @@
-<#import "parts/common.ftl" as p>
+<#import "parts/common.ftl" as c>
+<#import "parts/login.ftl" as l>
 
-<@p.page>
+<@c.page>
+<div>
+    <@l.logout />
+</div>
 
-<h1>Please login or create new account</h1>
     <div>
         <a href="login">Login form</a>
     </div>
     <div>
         <a href="registration">Registration form</a>
     </div>
+    <div>
+        <a href="restaurant">Restaurants List</a>
+    </div>
 
-</@p.page>
+</@c.page>
