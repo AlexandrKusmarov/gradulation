@@ -5,7 +5,7 @@
 Login page
     <@l.login "/login" />
 <a href="registration">Add new user</a>
-</@c.page>
+
 <#--<div class="container login-container">-->
     <#--<div class="row">-->
         <#--<div class="col text-center login-form-1">-->
@@ -34,3 +34,4 @@ Login page
 
     <#--</div>-->
 <#--</div>-->
+    </@c.page>

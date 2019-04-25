@@ -1,34 +1,51 @@
 <#import "parts/common.ftl" as p>
 
 <@p.page>
-    <table class="table">
-        <thead class="thead-dark">
-        <tr>
-            <th scope="col">0</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-        </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-        </tr>
-        </tbody>
-    </table>
+<div class="d-flex justify-content-center">
+    <h1>Please, vote for the restaurant!</h1>
+</div>
+<div class="row">
+    <#list restaurants as restaurant>
+        <div class="col-md-6">
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th class="d-flex justify-content-center" scope="col">${restaurant.restname}</th>
+                </tr>
+                </thead>
+            </table>
+
+        <#--Menu + progress bar-->
+
+            <div class="table-responsive">
+                <table class="table table-condensed">
+                    <thead>
+                    <tr>
+                        <th>Dish</th>
+                        <th>Price</th>
+                        <th>Progress</th>
+                    </tr>
+                    </thead>
+
+                    <tbody>
+                    <#list
+                    <tr>
+                        <td>uranium</td>
+                        <td>magic potion</td>
+                        <td>
+                            <div class="progress">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%;">
+                                    70%
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </#list>
+</div>
 </@p.page>
